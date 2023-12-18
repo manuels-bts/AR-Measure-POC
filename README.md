@@ -3,7 +3,10 @@ Measure tool [Proof of Concept] using ARKit based on other official and non-offi
 
 ![291311552-647ae928-2591-4b47-afa8-299ad2fe4513](https://github.com/manuels-bts/AR-Measure-POC/assets/116088500/55836142-e0ad-4d84-a4f0-feb64b88289e)
 
-## Screenshots 
+## Appendix
+This PoC has been based taking some sample projects in the web and Apple documentation attached on the following links:
+
+## Demo 
 
 ![ezgif com-optimize](https://github.com/manuels-bts/AR-Measure-POC/assets/116088500/5c45db0d-8ade-4cbe-8de2-133e18b3e939)
 
