@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Measure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4MC-zY-23D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rci-Se-E3z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetWhite" translatesAutoresizingMaskIntoConstraints="NO" id="vaX-kT-abI" userLabel="Target Image View">
+                                <rect key="frame" x="175" y="321" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Z98-6B-vxk"/>
+                                    <constraint firstAttribute="width" constant="25" id="ryY-K4-hDa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ruler" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cBt-ua-QgO" userLabel="Meter Image View">
+                                <rect key="frame" x="172.5" y="636.5" width="30" height="21"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Mfn-Mc-nj0"/>
+                                    <constraint firstAttribute="height" constant="30" id="caO-cF-DFD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJm-D1-Spp" userLabel="Message Label">
+                                <rect key="frame" x="0.0" y="611.5" width="375" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.22417534720000001" green="0.22417534720000001" blue="0.22417534720000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FGM-Yz-Zto">
+                                <rect key="frame" x="169" y="572.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDm-QB-S8n" userLabel="Reset Button">
+                                <rect key="frame" x="10" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5gR-iF-OMp"/>
+                                    <constraint firstAttribute="height" constant="40" id="MKz-4b-f3S"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <imageReference key="image" image="trash" catalog="system" symbolScale="medium"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray6Color"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButtonTappedWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="JpA-mz-PBB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZd-iq-Ncg" userLabel="Meter Button">
+                                <rect key="frame" x="325" y="25" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5UK-DE-RbU"/>
+                                    <constraint firstAttribute="width" constant="40" id="hIZ-5i-pDl"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ruler" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <imageReference key="image" image="gear" catalog="system" symbolScale="medium"/>
+                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="meterButtonTappedWithButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="clG-Vv-g0l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y1S-rx-tCE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rci-Se-E3z" firstAttribute="top" secondItem="4MC-zY-23D" secondAttribute="top" id="7ku-1d-hbB"/>
+                            <constraint firstAttribute="trailing" secondItem="rci-Se-E3z" secondAttribute="trailing" id="8s9-sB-vvr"/>
+                            <constraint firstItem="HJm-D1-Spp" firstAttribute="leading" secondItem="y1S-rx-tCE" secondAttribute="leading" id="BE1-lI-61k"/>
+                            <constraint firstItem="y1S-rx-tCE" firstAttribute="trailing" secondItem="HJm-D1-Spp" secondAttribute="trailing" id="CvN-mX-kBu"/>
+                            <constraint firstItem="cBt-ua-QgO" firstAttribute="top" secondItem="HJm-D1-Spp" secondAttribute="bottom" id="DoR-mL-ldp"/>
+                            <constraint firstItem="y1S-rx-tCE" firstAttribute="trailing" secondItem="EZd-iq-Ncg" secondAttribute="trailing" constant="10" id="HMm-jY-2Ks"/>
+                            <constraint firstItem="EZd-iq-Ncg" firstAttribute="top" secondItem="y1S-rx-tCE" secondAttribute="top" constant="5" id="TsM-5G-Wd6"/>
+                            <constraint firstItem="FGM-Yz-Zto" firstAttribute="centerX" secondItem="4MC-zY-23D" secondAttribute="centerX" id="Uf6-kv-jXA"/>
+                            <constraint firstAttribute="bottom" secondItem="rci-Se-E3z" secondAttribute="bottom" id="VAL-8k-U5C"/>
+                            <constraint firstItem="rci-Se-E3z" firstAttribute="leading" secondItem="4MC-zY-23D" secondAttribute="leading" id="bD4-OG-Dkg"/>
+                            <constraint firstItem="nDm-QB-S8n" firstAttribute="leading" secondItem="y1S-rx-tCE" secondAttribute="leading" constant="10" id="gkt-QZ-6TS"/>
+                            <constraint firstItem="vaX-kT-abI" firstAttribute="centerX" secondItem="rci-Se-E3z" secondAttribute="centerX" id="iRC-8M-ZdC"/>
+                            <constraint firstItem="vaX-kT-abI" firstAttribute="centerY" secondItem="rci-Se-E3z" secondAttribute="centerY" id="kUv-px-2Xp"/>
+                            <constraint firstItem="y1S-rx-tCE" firstAttribute="bottom" secondItem="cBt-ua-QgO" secondAttribute="bottom" constant="5" id="lVR-vs-6FW"/>
+                            <constraint firstItem="HJm-D1-Spp" firstAttribute="top" secondItem="FGM-Yz-Zto" secondAttribute="bottom" constant="2" id="nGH-xY-rYW"/>
+                            <constraint firstItem="nDm-QB-S8n" firstAttribute="top" secondItem="4MC-zY-23D" secondAttribute="topMargin" constant="5" id="r6i-LD-dOH"/>
+                            <constraint firstItem="cBt-ua-QgO" firstAttribute="centerX" secondItem="rci-Se-E3z" secondAttribute="centerX" id="s8H-18-AkA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="FGM-Yz-Zto" id="DL5-k8-Sax"/>
+                        <outlet property="messageLabel" destination="HJm-D1-Spp" id="hai-Hd-YLR"/>
+                        <outlet property="meterImageView" destination="cBt-ua-QgO" id="RjU-Cp-9Hr"/>
+                        <outlet property="resetButton" destination="nDm-QB-S8n" id="VK2-r7-Wru"/>
+                        <outlet property="sceneView" destination="rci-Se-E3z" id="ISV-7A-ac7"/>
+                        <outlet property="targetImageView" destination="vaX-kT-abI" id="cNC-Y0-kdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.59999999999999" y="56.221889055472268"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="ruler" catalog="system" width="128" height="57"/>
+        <image name="targetWhite" width="60" height="60"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
