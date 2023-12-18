@@ -6,6 +6,12 @@ Measure tool [Proof of Concept] using ARKit based on other official and non-offi
 ## Appendix
 This PoC has been based taking some sample projects in the web and Apple documentation attached on the following links:
 
+- [1-MeasureThings.zip](https://github.com/manuels-bts/AR-Measure-POC/files/13705389/1-MeasureThings.zip)
+- [2-ARKit2.0-Prototype.zip](https://github.com/manuels-bts/AR-Measure-POC/files/13705391/2-ARKit2.0-Prototype.zip)
+- [3-MeasureARKitPusher.zip](https://github.com/manuels-bts/AR-Measure-POC/files/13705393/3-MeasureARKitPusher.zip)
+- [4-ArMeasureDemo.zip](https://github.com/manuels-bts/AR-Measure-POC/files/13705395/4-ArMeasureDemo.zip)
+
+
 ## Demo 
 
 ![ezgif com-optimize](https://github.com/manuels-bts/AR-Measure-POC/assets/116088500/5c45db0d-8ade-4cbe-8de2-133e18b3e939)
